@@ -178,7 +178,7 @@ h1 {
 }
 
 .hero-image img,
-.photo-frame img {
+.photo-frame iframe {
   aspect-ratio: 16 / 10;
   object-fit: contain;
   background: #fff;
@@ -225,7 +225,9 @@ section {
   border-radius: 24px;
 }
 
-.photo-frame img {
+.photo-frame iframe {
+  width: 100%;
+  border: 0;
   border-radius: 16px;
 }
 
