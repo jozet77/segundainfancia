@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Segunda Infancia | Club de Fútbol</title>
+    <meta name="description" content="Sitio oficial de Segunda Infancia" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-cyan"></div>
+    <div class="ambient ambient-white"></div>
+
+    <header class="header glass container">
+      <div class="brand">
+        <span class="badge"></span>
+        <span>Segunda Infancia</span>
+      </div>
+      <a href="#eventos" class="btn btn-outline">Ver Eventos</a>
+    </header>
+
+    <main>
+      <section class="hero container reveal">
+        <div class="hero-content">
+          <p class="tag">Club de fútbol</p>
+          <h1>Segunda Infancia</h1>
+          <p class="slogan">“Vive tu nueva Infancia”</p>
+          <p class="lead">
+            Entrenamos, compartimos y disfrutamos el juego con amigos. Un equipo
+            con identidad premium, energía dinámica y conexión real.
+          </p>
+          <a class="btn btn-primary" href="#eventos">Ver Eventos</a>
+        </div>
+
+        <figure class="hero-image glass">
+          <img
+            src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1600&q=80"
+            alt="Equipo Segunda Infancia"
+          />
+          <div class="scanline"></div>
+        </figure>
+      </section>
+
+      <section class="about container reveal" id="sobre">
+        <h2>Sobre el Equipo</h2>
+        <p>
+          En <strong>Segunda Infancia</strong> nuestra misión es entrenar fútbol
+          con amigos, disfrutando del juego y fortaleciendo la conexión humana
+          dentro y fuera de la cancha.
+        </p>
+        <div class="cards">
+          <article class="card glass">
+            <h3>Misión</h3>
+            <p>Crecer futbolísticamente en un entorno competitivo y cercano.</p>
+          </article>
+          <article class="card glass">
+            <h3>Espíritu</h3>
+            <p>Jugar con intensidad, respeto y alegría en cada entrenamiento.</p>
+          </article>
+          <article class="card glass">
+            <h3>Identidad</h3>
+            <p>Una marca de club moderna, elegante y con personalidad propia.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="team-photo container reveal" id="equipo">
+        <h2>Imagen del Equipo</h2>
+        <div class="photo-frame glass">
+          <img
+            src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?auto=format&fit=crop&w=1600&q=80"
+            alt="Imagen destacada del equipo"
+          />
+        </div>
+      </section>
+
+      <section class="events container reveal" id="eventos">
+        <h2>Eventos</h2>
+        <p class="muted">Calendario del club y nuevas actividades.</p>
+
+        <div class="events-grid">
+          <form id="eventForm" class="event-form glass">
+            <h3>Agregar evento</h3>
+            <label for="eventDate">Fecha</label>
+            <input id="eventDate" type="date" required />
+
+            <label for="eventTitle">Título (opcional)</label>
+            <input id="eventTitle" type="text" placeholder="Ej: Partido amistoso" />
+
+            <label for="eventDesc">Descripción</label>
+            <textarea
+              id="eventDesc"
+              rows="4"
+              placeholder="Describe el evento..."
+              required
+            ></textarea>
+
+            <button class="btn btn-primary" type="submit">Agregar</button>
+          </form>
+
+          <div id="timeline" class="timeline">
+            <article class="timeline-item glass">
+              <span class="date">2026-05-03</span>
+              <h4>Entrenamiento abierto</h4>
+              <p>Trabajo técnico y físico con dinámica de juego reducido.</p>
+            </article>
+            <article class="timeline-item glass">
+              <span class="date">2026-05-10</span>
+              <h4>Partido integración</h4>
+              <p>Encuentro amistoso para fortalecer la química del grupo.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">Segunda Infancia</div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
