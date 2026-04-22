@@ -57,3 +57,28 @@ if (timeline) {
     })
     .forEach((item) => timeline.appendChild(item));
 }
+
+
+const liveStreamIframe = document.getElementById('live-stream-embed');
+
+const setLiveStreamFromExtEnv = async () => {
+  if (!liveStreamIframe) return;
+
+  try {
+    const response = await fetch('./ext_env', { cache: 'no-store' });
+    if (!response.ok) return;
+
+    const streamUrl = (await response.text()).trim();
+    if (!streamUrl) return;
+
+    const parsedUrl = new URL(streamUrl);
+
+    if (parsedUrl.protocol !== 'http:' && parsedUrl.protocol !== 'https:') return;
+
+    liveStreamIframe.src = parsedUrl.href;
+  } catch (_error) {
+    // Keep the default iframe source when ext_env is not available.
+  }
+};
+
+setLiveStreamFromExtEnv();

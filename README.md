@@ -25,3 +25,12 @@ npx serve .
 5. Deploy.
 
 El archivo `vercel.json` ya incluye configuración para servir la home desde `index.html`.
+
+
+## URL del live stream configurable
+
+El archivo `ext_env` en la raíz del repositorio define la URL del iframe de **Live stream**.
+
+- Debe contener solo una URL (por ejemplo: `https://beelup.com/player.php?id=29449194`).
+- Si el archivo no existe o la URL no es válida, se mantiene la URL por defecto en `index.html`.
+
