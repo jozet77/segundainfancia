@@ -74,32 +74,7 @@ a {
   box-shadow: var(--shadow);
 }
 
-.header {
-  position: sticky;
-  top: 14px;
-  z-index: 30;
-  margin-top: 14px;
-  border-radius: 14px;
-  padding: 0.8rem 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-weight: 800;
-}
-
-.badge {
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  background: var(--cyan);
-  box-shadow: 0 0 14px var(--cyan);
-}
 
 .btn {
   border: 0;
@@ -134,6 +109,11 @@ a {
   gap: 2rem;
   align-items: center;
   padding-block: 2.8rem;
+  justify-items: center;
+}
+
+.hero-content {
+  justify-self: start;
 }
 
 .tag {
@@ -175,6 +155,13 @@ h1 {
   border-radius: var(--radius);
   overflow: hidden;
   position: relative;
+  justify-self: center;
+  width: min(100%, 560px);
+  border: 2px solid rgba(0, 188, 212, 0.45);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.7) inset,
+    0 20px 50px rgba(0, 188, 212, 0.35),
+    0 0 40px rgba(0, 188, 212, 0.28);
 }
 
 .hero-image img,
@@ -194,7 +181,7 @@ h1 {
     transparent 65%
   );
   transform: translateX(-120%);
-  animation: shine 4s ease-in-out infinite;
+  animation: shine 3.2s ease-in-out infinite;
 }
 
 @keyframes shine {
@@ -321,6 +308,10 @@ textarea:focus {
   .hero {
     min-height: auto;
     grid-template-columns: 1fr;
+  }
+
+  .hero-image {
+    width: 100%;
   }
 
   .cards {
