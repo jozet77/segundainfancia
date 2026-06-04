@@ -42,12 +42,22 @@
 
       <section class="prediction-field container reveal" id="cancha-pronosticos">
         <div class="prediction-hero glass">
-          <div>
+          <div class="prediction-copy">
             <p class="tag">Mundial 2026</p>
             <h2>La cancha de pronósticos</h2>
             <p class="muted">Arma tus marcadores, sigue el calendario completo y compite con el equipo.</p>
+            <p class="cta-hint">Haz clic en el botón para ingresar a los pronósticos.</p>
           </div>
-          <a class="btn btn-primary" href="https://golp.cc/1IKxAX3L" target="_blank" rel="noopener noreferrer">Entrar a la cancha</a>
+          <a
+            class="btn btn-primary prediction-cta"
+            href="https://golp.cc/1IKxAX3L"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Haz clic aquí para ingresar a los pronósticos"
+          >
+            <span>Haz clic aquí</span>
+            <strong>Ingresar a los pronósticos</strong>
+          </a>
         </div>
 
         <figure class="rules-card glass">
@@ -178,14 +188,21 @@
       <section class="team-photo container reveal" id="equipo">
         <h2>Live stream</h2>
         <div class="photo-frame glass">
+          <div class="stream-placeholder" id="live-stream-placeholder">
+            <p class="muted">El live stream se cargará solo cuando lo abras.</p>
+            <button class="btn btn-primary" type="button" id="load-live-stream">
+              Abrir live stream
+            </button>
+          </div>
           <iframe
             id="live-stream-embed"
-            src="https://beelup.com/player.php?id=29445356"
+            data-default-src="https://beelup.com/player.php?id=29445356"
             title="Live stream"
-            allow="autoplay; fullscreen; picture-in-picture"
+            allow="fullscreen; picture-in-picture"
             allowfullscreen
             loading="lazy"
             referrerpolicy="no-referrer"
+            hidden
           ></iframe>
         </div>
       </section>

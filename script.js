@@ -60,8 +60,10 @@ if (timeline) {
 
 
 const liveStreamIframe = document.getElementById('live-stream-embed');
+const liveStreamPlaceholder = document.getElementById('live-stream-placeholder');
+const loadLiveStreamButton = document.getElementById('load-live-stream');
 
-const setLiveStreamFromExtEnv = async () => {
+const getLiveStreamFromExtEnv = async () => {
   if (!liveStreamIframe) return;
 
   try {
@@ -75,13 +77,25 @@ const setLiveStreamFromExtEnv = async () => {
 
     if (parsedUrl.protocol !== 'http:' && parsedUrl.protocol !== 'https:') return;
 
-    liveStreamIframe.src = parsedUrl.href;
+    liveStreamIframe.dataset.streamSrc = parsedUrl.href;
   } catch (_error) {
     // Keep the default iframe source when ext_env is not available.
   }
 };
 
-setLiveStreamFromExtEnv();
+const loadLiveStream = () => {
+  if (!liveStreamIframe) return;
+
+  const streamSrc = liveStreamIframe.dataset.streamSrc || liveStreamIframe.dataset.defaultSrc;
+  if (!streamSrc) return;
+
+  liveStreamIframe.src = streamSrc;
+  liveStreamIframe.hidden = false;
+  liveStreamPlaceholder?.setAttribute('hidden', '');
+};
+
+loadLiveStreamButton?.addEventListener('click', loadLiveStream);
+getLiveStreamFromExtEnv();
 
 const worldCupMatches = [
   [1,'2026-06-11','13:00','Grupo A','Mexico','South Africa','Estadio Azteca, Mexico City'],
