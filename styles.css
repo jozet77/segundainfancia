@@ -102,6 +102,11 @@ a {
   box-shadow: 0 10px 24px rgba(0, 216, 255, 0.25);
 }
 
+.btn:focus-visible {
+  outline: 3px solid rgba(0, 188, 212, 0.45);
+  outline-offset: 4px;
+}
+
 .hero {
   min-height: 84vh;
   display: grid;
@@ -216,6 +221,21 @@ section {
   width: 100%;
   border: 0;
   border-radius: 16px;
+}
+
+.stream-placeholder {
+  min-height: 260px;
+  display: grid;
+  place-items: center;
+  gap: 0.75rem;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(0, 188, 212, 0.14));
+}
+
+.stream-placeholder p {
+  margin: 0;
 }
 
 .events-grid {
@@ -349,6 +369,51 @@ textarea:focus {
   margin-top: 0.2rem;
 }
 
+.prediction-copy {
+  max-width: 670px;
+}
+
+.cta-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0.65rem 0 0;
+  color: #006b78;
+  font-weight: 800;
+}
+
+.cta-hint::before {
+  content: "→";
+  display: inline-grid;
+  place-items: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 999px;
+  background: rgba(0, 188, 212, 0.18);
+}
+
+.prediction-cta {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  min-width: 250px;
+  padding: 0.85rem 1.35rem;
+  text-align: center;
+  box-shadow: 0 14px 30px rgba(0, 188, 212, 0.28);
+}
+
+.prediction-cta span {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.prediction-cta strong {
+  font-family: "Sora", sans-serif;
+  font-size: 1rem;
+}
+
 .rules-card {
   border-radius: 24px;
   overflow: hidden;
@@ -478,6 +543,10 @@ th {
   .section-heading {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .prediction-cta {
+    width: 100%;
   }
 
   .filters,
