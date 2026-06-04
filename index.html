@@ -40,6 +40,80 @@
         </figure>
       </section>
 
+      <section class="prediction-field container reveal" id="cancha-pronosticos">
+        <div class="prediction-hero glass">
+          <div>
+            <p class="tag">Mundial 2026</p>
+            <h2>La cancha de pronósticos</h2>
+            <p class="muted">Arma tus marcadores, sigue el calendario completo y compite con el equipo.</p>
+          </div>
+          <a class="btn btn-primary" href="https://golp.cc/1IKxAX3L" target="_blank" rel="noopener noreferrer">Entrar a la cancha</a>
+        </div>
+
+        <figure class="rules-card glass">
+          <img
+            src="assets/images/cancha-pronosticos-reglas.png"
+            alt="Reglas de La cancha de pronósticos Mundial 2026"
+          />
+        </figure>
+
+        <div class="world-cup-panel glass">
+          <div class="section-heading">
+            <div>
+              <p class="tag">Calendario dinámico</p>
+              <h3>Todos los partidos del Mundial 2026</h3>
+            </div>
+            <span id="match-count" class="match-count">104 partidos</span>
+          </div>
+
+          <div class="filters" aria-label="Filtros del calendario mundialista">
+            <label>
+              Día
+              <select id="day-filter">
+                <option value="all">Todos los días</option>
+              </select>
+            </label>
+            <label>
+              Etapa
+              <select id="stage-filter">
+                <option value="all">Todas las etapas</option>
+              </select>
+            </label>
+            <label>
+              País
+              <select id="team-filter">
+                <option value="all">Todos los países</option>
+              </select>
+            </label>
+          </div>
+
+          <div id="world-cup-calendar" class="match-grid" aria-live="polite"></div>
+        </div>
+
+        <div class="featured-matches glass">
+          <div class="section-heading">
+            <div>
+              <p class="tag">Selecciones destacadas</p>
+              <h3>Partidos de Ecuador, Argentina, España y Brasil</h3>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Selección</th>
+                  <th>Fecha</th>
+                  <th>Partido</th>
+                  <th>Etapa</th>
+                  <th>Sede</th>
+                </tr>
+              </thead>
+              <tbody id="featured-matches-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
       <section class="events container reveal" id="eventos">
         <h2>Eventos</h2>
         <p class="muted">Calendario del club y nuevas actividades.</p>
